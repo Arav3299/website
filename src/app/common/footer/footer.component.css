@@ -1,0 +1,84 @@
+
+.navbar-nav {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.nav{
+    list-style: none;
+}
+footer {
+    background-image: url(../../../assets/logo/banner-2.jpg);
+    /* background-image: url(../Img/footer.jpg); */
+    /* background-position: center center; */
+    background-position: bottom 10px right 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    font-family: "Oswald", Sans-serif;
+    font-weight: 400;
+    color: inherit;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    font-size: 13px;
+    letter-spacing: 2px !important;
+    position: relative;
+}
+
+footer .back {
+    background-color: #19191A;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.newlogo {
+    max-height: 90px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+ul.list li{
+    width:auto;
+    float: left;
+}
+.inlineList {
+    display: flex;
+    flex-direction: row;
+    /* Below sets up your display method: flex-start|flex-end|space-between|space-around */
+    justify-content: center; 
+
+    /* Below removes bullets and cleans white-space */
+    list-style: none;
+    padding: 0px;
+    /* Bonus: forces no word-wrap */
+    white-space: nowrap;
+  }
+
+.data
+  {
+    color:#fff;
+    text-transform: uppercase;
+    padding: 20px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    /* Below sets up your display method: flex-start|flex-end|space-between|space-around */
+    justify-content: space-between; 
+
+    /* Below removes bullets and cleans white-space */
+    list-style: none;
+    padding: 40px;
+    /* Bonus: forces no word-wrap */
+    white-space: nowrap;
+
+  }
+ 
