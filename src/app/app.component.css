@@ -1,0 +1,20 @@
+.css{
+    margin: 0rem !important;
+    padding: 0rem !important;
+
+}
+
+.container-fluid{
+    margin: 0rem !important;
+    padding: 0rem !important;
+}
+
+#button{
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+  }

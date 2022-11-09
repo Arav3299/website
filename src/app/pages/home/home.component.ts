@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -9,19 +10,38 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService,private navi:Router) { }
 
   contents:any;
 
+  count:any;
+
+  @Output() newItemEvent = new EventEmitter();
+
   customOptions!: OwlOptions;
 
+  cartShow=false;
+
   ngOnInit(): void {
+
+    // history.state.data=this.cartShow;
+
+    this.count=this.service.countForCart;
 
     this.service.getAllContents().subscribe({
       next:(data)=>{
         this.contents=data;
         console.log(this.contents);
+        localStorage.setItem("human",JSON.stringify(data));
         
+      },
+      error:(err)=>{
+        console.log(err);
+        
+      },
+      complete:()=>{
+console.log("subscription completed");
+
       }
     })
 
@@ -34,22 +54,15 @@ export class HomeComponent implements OnInit {
   
   carouseldata(){
 
-  
-    
     this.customOptions = {
       loop: true,
       autoplay:true,
       center:false,
       autoHeight:true,
       autoWidth:true,
-      // mouseDrag: false,
-      // touchDrag: false,
-      // pullDrag: false,
       dots: false,
-      // navSpeed: 700,
       navText: ['&#8249', '&#8250;'],
       autoplayTimeout:1000,
-      // items:12,
       responsive: {
         0: {
           items: 1 
@@ -68,9 +81,21 @@ export class HomeComponent implements OnInit {
       nav: true,
     }
 
- 
-
   }
+
+  onCartClick(){
+    this.service.data.next(this.count++);
+  }
+
+  toMen(){
+    this.navi.navigate(['tomen'])
+  }
+
+  toWomen(){
+    this.navi.navigate(['towomen'],{state:{data:this.contents}})
+  }
+
+
  
 
 }

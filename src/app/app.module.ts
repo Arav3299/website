@@ -1,3 +1,4 @@
+import { ReactiveFormsModule  } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,9 @@ import { FooterComponent } from './common/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-
+import { SignupComponent } from './pages/signup/signup.component';
+import { MenComponent } from './pages/men/men.component';
+import { WomenComponent } from './pages/women/women.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,13 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FooterComponent,
     LoginComponent,
     HomeComponent,
+    SignupComponent,
+    MenComponent,
+    WomenComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,CarouselModule,BrowserAnimationsModule
+    AppRoutingModule,HttpClientModule,CarouselModule,BrowserAnimationsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

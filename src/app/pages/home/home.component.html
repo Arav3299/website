@@ -1,4 +1,5 @@
-  <div class="carousalWrapper mb-5">
+<app-header></app-header>
+<div class="carousalWrapper mb-3">
   <div id="carouselExampleControls" class="carousel slide for" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -43,9 +44,20 @@
     </button>
   </div>
 </div>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12">
+    <!-- <div class="col-md-4 offset-md-4"> -->
+      <h1 class="ms-3 py-5" style="font-weight: 600;font-style:italic ;font-family: 'Ruda', sans-serif;color: #272727;">
+        "It's What We Do That's Defines Us".
+      </h1>
+    <!-- </div> -->
+  </div>
+</div>
+</div>
 <section class="my-4 ji">
-  <div class="row">
-    <div class="col-md-6 ms-4">
+  <div class="container">
+    <div class="col-md-6 ">
      <h3> Our Collections</h3>
     </div>
   </div>
@@ -58,48 +70,45 @@
       </ng-template>
     </ng-container>
   </owl-carousel-o>
-
 </section>
-<section class="forMan">
-  <div class="col-md-12">
-      <div class="row hi">
-          <div class="col-md-6 setdata hi">
-                  <div class="content text-center">
-                      <h2 class="text-uppercase">For Him</h2>
-                      <h5 class="text-uppercase">Get Ready For Summer</h5>
-                      <!-- <hr class="hr1" > -->
-                 <a><button class="btn btn-light forButton" type="button"> <b>Shop Men</b> </button></a>
-  
-                  </div>
-          </div>
-          <div class="col-md-6 binddata">
-                 <div class="setimage">
-                  <img src="https://static.wixstatic.com/media/faddb6_db95a29e5b5d4c4eb78ff0cfdb37bf6e~mv2.png/v1/crop/x_0,y_347,w_2400,h_2307/fill/w_735,h_707,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/DSC02661-min_edited.png" class="alterimage" alt="DSC02661-min_edited.png" >
-                 </div>
-          </div>
-      </div>
-  </div>
+<div class="container-fluid">
+  <section class="forMan">
+    <div class="col-md-12">
+        <div class="row hi">
+            <div class="col-md-6 setdata hi">
+                    <div class="content text-center">
+                        <h2 class="text-uppercase">For Him</h2>
+                        <h5 class="text-uppercase">Get Ready For Summer</h5>
+                        <a><button class="btn btn-light forButton" type="button" (click)="toMen()"> <b>Shop Men</b> </button></a>
+                    </div>
+            </div>
+            <div class="col-md-6 binddata">
+                   <div class="setimage">
+                    <img src="https://static.wixstatic.com/media/faddb6_db95a29e5b5d4c4eb78ff0cfdb37bf6e~mv2.png/v1/crop/x_0,y_347,w_2400,h_2307/fill/w_735,h_707,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/DSC02661-min_edited.png" class="alterimage" alt="DSC02661-min_edited.png" >
+                   </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="forWoman">
-      <div class="col-md-12">
-          <div class="row newset">
-              <div class="col-md-6 binddata">
-                  <div class="setimage text-center">
-                   <img src="https://static.wixstatic.com/media/faddb6_fd767e7577f04d3daffd751d8852d5eb~mv2.jpg/v1/crop/x_0,y_479,w_3296,h_3162/fill/w_737,h_707,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DSC02750-min.jpg" class="alterimagew" alt="DSC02661-min_edited.png" >
-                  </div>
-           </div>
-              <div class="col-md-6 setdata text-center">
-                      <div class="contentw">
-                          <h2 class="text-uppercase h2">For Her</h2>
-                          <h5 class="text-uppercase h5">Hot Spring Looks</h5>
-                          <!-- <hr class="hr2" > -->
-                          <!-- <div class="hr2"></div> -->
-                     <a><button class="btn btn-light forButtonw" type="button"> <b>Shop Women</b> </button></a>
-                      </div>
-              </div>
-          </div>
-      </div>
+        <div class="col-md-12">
+            <div class="row newset">
+                <div class="col-md-6 binddata">
+                    <div class="setimage text-center">
+                     <img src="https://static.wixstatic.com/media/faddb6_fd767e7577f04d3daffd751d8852d5eb~mv2.jpg/v1/crop/x_0,y_479,w_3296,h_3162/fill/w_737,h_707,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DSC02750-min.jpg" class="alterimagew" alt="DSC02661-min_edited.png" >
+                    </div>
+             </div>
+                <div class="col-md-6 setdata text-center">
+                        <div class="contentw">
+                            <h2 class="text-uppercase h2">For Her</h2>
+                            <h5 class="text-uppercase h5">Hot Spring Looks</h5>
+                       <a><button class="btn btn-light forButtonw" (click)="toWomen()" type="button"> <b>Shop Women</b> </button></a>
+                        </div>
+                </div>
+            </div>
+        </div>
 </section>
+</div>
 <section class="pt-5 pb-5">
   <div class="container">
     <div class="row">
@@ -127,7 +136,7 @@
                     </div>
                       <ul class="icon">
                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cart-shopping"></i></a></li>
+                        <li><a (click)="onCartClick()"><i class="fa fa-cart-shopping"></i></a></li>
                     </ul>
                     </div>
                     <div class="card-body">
@@ -213,7 +222,7 @@
     </div>
   </div>
 </section>
- 
+<app-footer></app-footer>
 
 
 

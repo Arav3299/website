@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <div class="row forSmall">
+        <div class="col-md-4 mb-3 col-12" *ngFor="let man of men.slice(5,10);let i=index">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-text">{{man.title}}</h4>
+                    <img class="img-fluid" alt="100%x280" src="{{man.imageUrl}}">
+
+                    <span class="post">${{man.price}}</span>
+                    <!-- <p class="card-text">{{man.subTitle}}</p> -->
+                    <p class="cardp">{{man.description}}</p>
+                    <button class="btn btn-primary float-end" (click)="toSend(man)">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer> </app-footer>
